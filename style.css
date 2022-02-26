@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #011627;
+}
+
+.butt{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.butt button{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.container .box{
+    width: 20%;
+    height: 200px;
+    border: 1px solid white;
+    /* background-color: rgb(14, 6, 92); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 25px;
+    text-shadow: 1px 2px 2px black;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.box::before{
+    content: 'Copy';
+    height: 140%;
+    width: 100%;
+    position: absolute;
+    top: -20%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.144);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    font-size: 20px;
+    transition: .5s;
+    transform: scale(0);
+}
+
+.container .box:hover::before{
+    transform: scale(1);
+}
+
